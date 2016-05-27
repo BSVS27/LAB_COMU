@@ -3,14 +3,23 @@
 # Date: 23 April 2016
 # jgaple@gmail.com
 #
+# Adapted for Adafruit motor shield
+# Author: Pablo J. Rogina
+# Date: 26 May 2016
+# pablojr@gmail.com
+#
 # app.py
 #######
 
-from flask import Flask, render_template, request, redirect, url_for, make_response
-import motors
-import RPi.GPIO as GPIO
+use_mshield = True
 
-GPIO.setmode(GPIO.BOARD) #set up GPIO
+from flask import Flask, render_template, request, redirect, url_for, make_response
+if use_mshield:
+    import mshield as motors
+    motors.enable()
+else:
+    import motors
+import RPi.GPIO as GPIO
 
 app = Flask(__name__) #set up flask server
 
@@ -44,4 +53,8 @@ def reroute(changepin):
 	response = make_response(redirect(url_for('index')))
 	return(response)
 
-app.run(debug=True, host='0.0.0.0', port=8000) #set up the server in debug mode to the port 8000
+# set up the server linstening on ort 8765
+app.run(debug=False, host='0.0.0.0', port=8765) 
+
+motors.disable()
+
