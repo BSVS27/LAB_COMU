@@ -1,29 +1,12 @@
-# WEB CONTROLLED ROBOT #
+# Raspberry Pi Web Controlled Robot With Video Stream #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Raspberry Pi Robot that can be controlled via a website with a live streaming webcam
 
-### What is this repository for? ###
+Adapted from [James Poole's project](http://jamespoole.me/2016/04/29/web-controlled-robot-with-video-stream/) with changes as follows:
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* [Adafruit motor shield v1](https://learn.adafruit.com/adafruit-motor-shield) instead of LD293 IC + proto-board
+* New Python module to drive the motors through the motor shield, taking C source code as guideline, provided in this [post](https://www.raspberrypi.org/forums/viewtopic.php?f=45&t=16118)
+* [MJPG-streamer](https://sourceforge.net/projects/mjpg-streamer) streaming application instead of motion. Since it's less resource intensive, video responsiveness and quality improved noticeably
+* Updated index.html page
+  * Removed fixed IP for streaming server (based on []()
+  * Rearranged control buttons to mimic layout of most remote controls (stop button move
