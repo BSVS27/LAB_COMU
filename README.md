@@ -7,6 +7,6 @@ Adapted from [James Poole's project](http://jamespoole.me/2016/04/29/web-control
 * [Adafruit motor shield v1](https://learn.adafruit.com/adafruit-motor-shield) instead of LD293 IC + proto-board
 * New Python module to drive the motors through the motor shield, taking C source code this [post](https://www.raspberrypi.org/forums/viewtopic.php?f=45&t=16118) as guideline
 * [MJPG-streamer](https://sourceforge.net/projects/mjpg-streamer) streaming application instead of motion. Since it's less resource intensive, video responsiveness and quality icmproved noticeably
-* Updated index.html page
-  * Removed fixed IP for streaming server (based on []()
-  * Rearranged control buttons to mimic layout of most remote controls (stop button moved into center of motion arrows)
+* Updated index.html page:
+    * Removed fixed IP for streaming server (based on []()
+    * Rearranged control buttons to mimic layout of most remote controls (stop button moved into center of motion arrows)
