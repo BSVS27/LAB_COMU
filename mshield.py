@@ -98,7 +98,7 @@ def DCMotorInit( num ):
         latch_state &= ~_BV(MOTOR4_A) & ~_BV(MOTOR4_B)
         latch_tx()
     else:
-        print 'Unsupported motor number'
+        print ("Unsupported motor number")
 
 
 def DCMotorRun(num, cmd):
@@ -117,7 +117,7 @@ def DCMotorRun(num, cmd):
         a = MOTOR4_A
         b = MOTOR4_B
     else:
-        print 'Unsupported motor number'
+        print ("Unsupported motor number")
     
     global latch_state 
     if cmd == FORWARD:
@@ -133,7 +133,7 @@ def DCMotorRun(num, cmd):
         latch_state &= ~_BV(b)
         latch_tx()
     else:
-        print 'Unsupported command'
+        print ("Unsupported command")
 
 
 

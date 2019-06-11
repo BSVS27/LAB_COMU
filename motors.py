@@ -7,7 +7,7 @@
 #######
 
 import RPi.GPIO as GPIO
-from time import sleep
+import time
 
 GPIO.setmode(GPIO.BOARD)
 
@@ -83,3 +83,5 @@ def stop():
 	GPIO.output(Motor2A,GPIO.LOW)
 	GPIO.output(Motor2B,GPIO.LOW)
 	GPIO.output(Motor2Enable,GPIO.LOW)
+
+forward()
